@@ -4,7 +4,7 @@ import discord
 from discord.ext import commands
 import json
 
-with open('setting.json', mode = 'r', encoding='utf8')as jfile:
+with open('setting.json', mode = 'r', encoding='utf8') as jfile:
     jdata = json.load(jfile)
     # with open(file name, mode = r or w..., encoding = 'utf8') as rename 'jfile'
     # variable 'jdata' = json.load('jfile')
@@ -31,6 +31,13 @@ async def on_member_remove(member: discord.Member):
     await channel.send(f'Member {member.mention} left')
 
 @bot.command()
-async def ping(ctx):    # ctx include<username, id, server location, channel location>
+async def image(ctx):
+    pic = discord.File(jdata['pic1'])
+    await ctx.send(file = pic)
+
+@bot.command()
+async def ping(ctx):        # ctx include<username, id, server location, channel location>
     await ctx.send(f'{round(bot.latency*1000)} (ms)')
+
 bot.run(jdata['TOKEN'])     # Index = 'TOKEN'
+
