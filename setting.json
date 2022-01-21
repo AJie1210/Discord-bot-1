@@ -4,5 +4,8 @@
     "Welcome_channel":"933785604792131584",
     "Leave_channel":"933733567601709056",
 
-    "pic1":"E:\\Picture\\02_16x9.jpg"
+    "pic_random":["C:\\Users\\ytes6\\OneDrive\\圖片\\卡納赫拉\\tenor_1.gif","C:\\Users\\ytes6\\OneDrive\\圖片\\卡納赫拉\\02_16x9.jpg"],
+    "pic1":"C:\\Users\\ytes6\\OneDrive\\圖片\\卡納赫拉\\tenor_1.gif",
+    "pic2":"C:\\Users\\ytes6\\OneDrive\\圖片\\卡納赫拉\\02_16x9.jpg",
+    "url_pic":"https://cdnb.artstation.com/p/assets/images/images/045/117/075/medium/romain-jouandeau-concept-canyon-path-ferns-v08.jpg?1641954053"
 }

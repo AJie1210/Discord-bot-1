@@ -1,8 +1,10 @@
 from ast import AsyncFunctionDef
+from dis import dis
 from tokenize import Token
 import discord
 from discord.ext import commands
 import json
+import random
 
 with open('setting.json', mode = 'r', encoding='utf8') as jfile:
     jdata = json.load(jfile)
@@ -31,13 +33,28 @@ async def on_member_remove(member: discord.Member):
     await channel.send(f'Member {member.mention} left')
 
 @bot.command()
-async def image(ctx):
-    pic = discord.File(jdata['pic1'])
-    await ctx.send(file = pic)
-
-@bot.command()
 async def ping(ctx):        # ctx include<username, id, server location, channel location>
     await ctx.send(f'{round(bot.latency*1000)} (ms)')
 
-bot.run(jdata['TOKEN'])     # Index = 'TOKEN'
+@bot.command()
+async def image_web(ctx):
+    image_web = (jdata['url_pic'])      # url not file, so can't use "discord.File"
+    await ctx.send(image_web)
 
+@bot.command()
+async def image_random(ctx):
+    random_pic = random.choice(jdata['pic_random'])     #import random
+    pic = discord.File(random_pic)
+    await ctx.send(file = pic)
+
+@bot.command()
+async def image_1(ctx):
+    picture = discord.File(jdata['pic1'])
+    await ctx.send(file = picture)
+
+@bot.command()
+async def image_2(ctx):
+    picture = discord.File(jdata['pic2'])
+    await ctx.send(file = picture)
+
+bot.run(jdata['TOKEN'])     # Index = 'TOKEN'
