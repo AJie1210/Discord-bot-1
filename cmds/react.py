@@ -1,6 +1,7 @@
+from email.mime import image
 import discord
 from discord.ext import commands
-from core.classes import Cog_Extension
+from core.classs import Cog_Extension
 import random
 import json
 
@@ -11,9 +12,14 @@ with open('setting.json', mode = 'r', encoding='utf8') as jfile:
 
 class React(Cog_Extension):
     @commands.command()
-    async def image_web(self, ctx):
-        image_web = (jdata['url_pic'])      # url not file, so can't use "discord.File"
-        await ctx.send(image_web)
+    async def image_web1(self, ctx):
+        image_web1 = (jdata['url_pic'])      # url not file, so can't use "discord.File"
+        await ctx.send(image_web1)
+    
+    @commands.command()
+    async def image_web2(self, ctx):
+        image_web2 = (jdata['url_pic_kanahei'])
+        await ctx.send(image_web2)
 
     @commands.command()
     async def image_random(self, ctx):

@@ -20,17 +20,7 @@ bot = commands.Bot(command_prefix= '!', intents = intents)
 async def on_ready():
     print(">> AJ_Bot is online <<")
 
-@bot.event
-async def on_member_join(member: discord.Member):
-    server = bot.get_guild(int(jdata['Guild']))
-    channel = bot.get_channel(int(jdata['Welcome_channel']))
-    await channel.send(f'New member {member.mention} joined !')
-    await channel.send(f'Welcome to the \"{server}\"')
 
-@bot.event
-async def on_member_remove(member: discord.Member):
-    channel = bot.get_channel(int(jdata['Leave_channel']))
-    await channel.send(f'Member {member.mention} left')
 
 @bot.command()
 async def load(ctx, extension):

@@ -1,8 +1,7 @@
 from dis import dis
-import imp
 import discord
 from discord.ext import commands
-from core.classes import Cog_Extension
+from core.classs import Cog_Extension
 
 class Main(Cog_Extension):
 
