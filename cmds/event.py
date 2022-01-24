@@ -22,9 +22,9 @@ class Event(Cog_Extension):
 
     @commands.Cog.listener()
     async def on_message(self, msg):
-        keyword = 'hi'
-        if msg.content == keyword and msg.author != self.bot.user:
-            await msg.channel.send('Nice to meet you !')
+        keyword = jdata['keywords']
+        if msg.content in keyword and msg.author != self.bot.user:
+            await msg.channel.send('Hi , nice to meet you !')
 
 def setup(bot):
     bot.add_cog(Event(bot))
