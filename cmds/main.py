@@ -21,5 +21,14 @@ class Main(Cog_Extension):
         embed.set_footer(text="Rainbow Six Extraction")
         await ctx.send(embed=embed)
 
+    @commands.command()
+    async def said(self, ctx,*, msg):
+        await ctx.message.delete()
+        await ctx.send(msg)
+
+    @commands.command()
+    async def clean(self, ctx, num:int):
+        await ctx.channel.purge(limit = num+1)
+
 def setup(bot):
     bot.add_cog(Main(bot))
