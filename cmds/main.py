@@ -27,8 +27,9 @@ class Main(Cog_Extension):
         await ctx.send(msg)
 
     @commands.command()
-    async def clean(self, ctx, num:int):
+    async def purge(self, ctx, num:int):
         await ctx.channel.purge(limit = num+1)
+        await ctx.channel.send('Delete message done')
 
 def setup(bot):
     bot.add_cog(Main(bot))
