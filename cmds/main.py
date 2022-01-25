@@ -11,9 +11,9 @@ class Main(Cog_Extension):
         await ctx.send(f'{round(self.bot.latency*1000)} (ms)')
 
     @commands.command()
-    async def R6E_embed(self, ctx):
+    async def R6E_embed(self, ctx):     #embem Generator
         embed=discord.Embed(title="Rainbow Six Extraction", url="https://www.youtube.com/watch?v=-_QWD81HdAM", description="Official Introduce Video", color=0x0008ff, 
-        timestamp = datetime.datetime.utcnow())
+        timestamp = datetime.datetime.utcnow())     #import datetime and set datetime utcnow() = utc+8
         embed.set_author(name="Leoson20718", url="https://discord.gg/xrtXZz4b", icon_url="https://cdna.artstation.com/p/assets/images/images/042/134/628/medium/jing-zhang-01.jpg?1633655009")
         embed.set_thumbnail(url="https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1oH1jUZj1VZYxey5Mp8vYP/558408976d9552372a2cc3952db69458/page-meta_R6X.png")
         embed.add_field(name="Leoson's Server", value="https://discord.gg/xrtXZz4b", inline=False)

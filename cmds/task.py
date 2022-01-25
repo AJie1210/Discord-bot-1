@@ -5,7 +5,7 @@ import json, asyncio, datetime
 
 class Task(Cog_Extension):
     def __init__(self,*args,**kwargs):
-        super().__init__(*args,**kwargs)
+        super().__init__(*args,**kwargs)        # keep classs.py __init__ bot
 
         async def interval():
             await self.bot.wait_until_ready()       #wait bot online
@@ -18,8 +18,8 @@ class Task(Cog_Extension):
 
     @commands.command()
     async def set_channel(self, ctx, ch:int):       #ch:int 註解int型態
-        self.set_channel = self.bot.get_channel(ch)
-        await ctx.send(f'Set Channel: {self.channel.mention}')
+        self.channel = self.bot.get_channel(ch)
+        await ctx.send(f'Set Channel: {self.channel.mention}')      #self.channel.mention = hashtag sth
 
 def setup(bot):
     bot.add_cog(Task(bot))
