@@ -5,6 +5,7 @@ import discord
 from discord.ext import commands
 import json
 import os
+#import keep_alive      keep_alive.keep_alive()
 
 with open('setting.json', mode = 'r', encoding='utf8') as jfile:
     jdata = json.load(jfile)

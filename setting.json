@@ -1,14 +1,22 @@
 {
-    "TOKEN":"OTMzNjEyMTEzNDY3OTQwOTE3.YekECQ.zeQ0d13I_MUEkELihDsLplx1IZE",
-    "Guild":"933732477216899182",
-    "Welcome_channel":"933785604792131584",
-    "Leave_channel":"933733567601709056",
-
-    "pic_random":["C:\\Users\\ytes6\\OneDrive\\圖片\\Artstation\\tenor_1.gif","C:\\Users\\ytes6\\OneDrive\\圖片\\Artstation\\02_16x9.jpg",
-        "C:\\Users\\ytes6\\OneDrive\\圖片\\Artstation\\terraform-studios-copy-of-p-066.jpg"],
-    "pic1":"C:\\Users\\ytes6\\OneDrive\\圖片\\Artstation\\tenor_1.gif",
-    "pic2":"C:\\Users\\ytes6\\OneDrive\\圖片\\Artstation\\02_16x9.jpg",
-    "url_pic":"https://cdnb.artstation.com/p/assets/images/images/045/117/075/medium/romain-jouandeau-concept-canyon-path-ferns-v08.jpg?1641954053",
-    "url_pic_kanahei":"https://stickershop.line-scdn.net/stickershop/v1/product/17779/LINEStorePC/main.png;compress=true",
-    "keywords":["Hi","hi","Hello","hello"]
+    "TOKEN": "OTMzNjEyMTEzNDY3OTQwOTE3.YekECQ.zeQ0d13I_MUEkELihDsLplx1IZE",
+    "Guild": "933732477216899182",
+    "Welcome_channel": "933785604792131584",
+    "Leave_channel": "933733567601709056",
+    "pic_random": [
+        "C:\\Users\\ytes6\\OneDrive\\\u5716\u7247\\Artstation\\tenor_1.gif",
+        "C:\\Users\\ytes6\\OneDrive\\\u5716\u7247\\Artstation\\02_16x9.jpg",
+        "C:\\Users\\ytes6\\OneDrive\\\u5716\u7247\\Artstation\\terraform-studios-copy-of-p-066.jpg"
+    ],
+    "pic1": "C:\\Users\\ytes6\\OneDrive\\文件\\GitHub\\AJ_Bot\\picture\\max-bedulenko-kheeva-1.jpg",
+    "pic2": "C:\\Users\\ytes6\\OneDrive\\文件\\GitHub\\AJ_Bot\\picture\\jing-zhang-01.jpg",
+    "url_pic": "https://cdnb.artstation.com/p/assets/images/images/045/117/075/medium/romain-jouandeau-concept-canyon-path-ferns-v08.jpg?1641954053",
+    "url_pic_kanahei": "https://stickershop.line-scdn.net/stickershop/v1/product/17779/LINEStorePC/main.png;compress=true",
+    "keywords": [
+        "Hi",
+        "hi",
+        "Hello",
+        "hello"
+    ],
+    "time": "00"
 }

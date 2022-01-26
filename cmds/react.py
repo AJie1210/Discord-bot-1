@@ -4,6 +4,8 @@ from discord.ext import commands
 from core.classs import Cog_Extension
 import random
 import json
+import datetime
+from datetime import timezone
 
 with open('setting.json', mode = 'r', encoding='utf8') as jfile:
     jdata = json.load(jfile)
@@ -36,6 +38,11 @@ class React(Cog_Extension):
     async def image_2(self, ctx):
         picture = discord.File(jdata['pic2'])
         await ctx.send(file = picture)
+    
+    @commands.command()
+    async def time_now(self, ctx):
+        time = datetime.datetime.now()
+        await ctx.send(time)
 
 def setup(bot):
     bot.add_cog(React(bot))
