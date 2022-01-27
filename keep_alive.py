@@ -1,4 +1,4 @@
-""" from flask import Flask
+from flask import Flask
 from threading import Thread
 
 app = Flask('')
@@ -12,7 +12,7 @@ def run():
 
 def keep_alive():
     server = Thread(target=run)
-    server.start() """
-
+    server.start()
+#for 24H online bot
 #keep_alive.py file
 #use on the repl.it

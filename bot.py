@@ -5,42 +5,41 @@ import discord
 from discord.ext import commands
 import json
 import os
-#import keep_alive      keep_alive.keep_alive()
+import keep_alive
+#import keep_alive
 
 with open('setting.json', mode = 'r', encoding='utf8') as jfile:
     jdata = json.load(jfile)
     # with open(file name, mode = r or w..., encoding = 'utf8') as rename 'jfile'
     # variable 'jdata' = json.load('jfile')
 
-intents = discord.Intents.default()
+intents = discord.Intents.default()                             #初始設定
 intents.members = True
+bot = commands.Bot(command_prefix= '!', intents = intents)      #setting commands prefix
 
-bot = commands.Bot(command_prefix= '!', intents = intents)
-
-@bot.event
+@bot.event                                                      #Bot online message
 async def on_ready():
     print(">> AJ_Bot is online <<")
 
-
-
-@bot.command()
+@bot.command()                                                  #Cog commands load file
 async def load(ctx, extension):
     bot.load_extension(f'cmds.{extension}')
     await ctx.send(f'Loaded {extension} done.')
 
-@bot.command()
+@bot.command()                                                  #Cog commands unload file
 async def unload(ctx, extension):
     bot.unload_extension(f'cmds.{extension}')
     await ctx.send(f'Unloaded {extension} done.')
 
-@bot.command()
+@bot.command()                                                  #Cog commands reload file
 async def reload(ctx, extension):
     bot.reload_extension(f'cmds.{extension}')
     await ctx.send(f'Reloaded {extension} done.')
 
-for Filename in os.listdir('./cmds'):
+for Filename in os.listdir('./cmds'):                           #Cog find all file(.py) with !help
     if Filename.endswith('.py'):
         bot.load_extension(f'cmds.{Filename[:-3]}')
 
-if __name__ == "__main__":
+if __name__ == "__main__":                                      #Bot run setting
+    keep_alive.keep_alive()
     bot.run(jdata['TOKEN'])     # Index = 'TOKEN'

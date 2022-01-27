@@ -6,12 +6,12 @@ import datetime
 
 class Main(Cog_Extension):
 
-    @commands.command()
-    async def ping(self, ctx):        # ctx include<username, id, server location, channel location>
+    @commands.command()                             #return ping
+    async def ping(self, ctx):                      #ctx include<username, id, server location, channel location>
         await ctx.send(f'{round(self.bot.latency*1000)} (ms)')
 
-    @commands.command()
-    async def R6E_embed(self, ctx):     #embem Generator
+    @commands.command()                             #embed module from embem Generator
+    async def R6E_embed(self, ctx):     
         embed=discord.Embed(title="Rainbow Six Extraction", url="https://www.youtube.com/watch?v=-_QWD81HdAM", description="Official Introduce Video", color=0x0008ff, 
         timestamp = datetime.datetime.utcnow())     #import datetime and set datetime utcnow() = utc+8
         embed.set_author(name="Leoson20718", url="https://discord.gg/xrtXZz4b", icon_url="https://cdna.artstation.com/p/assets/images/images/042/134/628/medium/jing-zhang-01.jpg?1633655009")
