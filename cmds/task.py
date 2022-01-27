@@ -18,15 +18,15 @@ class Task(Cog_Extension):
 
         async def time_task():
             await self.bot.wait_until_ready()       #wait bot online
-            self.channel = self.bot.get_channel(935857983366234112)
+            self.channel = self.bot.get_channel(934720325000777819)
             while not self.bot.is_closed():
-                now_time = datetime.datetime.now().strftime('%M')
+                now_time = datetime.datetime.now().strftime('%M%S')     #(min,sec)
                 with open('setting.json','r',encoding = 'utf8') as jfile:
                     jdata = json.load(jfile)
-                if now_time == jdata['time']:
-                    await self.channel.send("Task is working !")
-                    await self.channel.send(datetime.datetime.utcnow())       #set_time while time == set_time
-                    await asyncio.sleep(1)                              #send message
+                if now_time == jdata['time']:       #set_time while time == set_time
+                    await self.channel.send("Task is working !")         #send message
+                    await self.channel.send(datetime.datetime.utcnow())       
+                    await asyncio.sleep(1)                             
                 else:
                     await asyncio.sleep(1)
                     pass
