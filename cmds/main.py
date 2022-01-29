@@ -21,12 +21,12 @@ class Main(Cog_Extension):
         embed.set_footer(text="Rainbow Six Extraction")
         await ctx.send(embed=embed)
 
-    @commands.command()
+    @commands.command()                             #send message by bot
     async def said(self, ctx,*, msg):
         await ctx.message.delete()
         await ctx.send(msg)
 
-    @commands.command()
+    @commands.command()                             #delete n message
     async def purge(self, ctx, num:int):
         await ctx.channel.purge(limit = num+1)
         await ctx.channel.send('Delete message done')

@@ -5,11 +5,11 @@ from core.classs import Cog_Extension
 import random
 import json
 import datetime
-from datetime import timezone
+
 
 with open('setting.json', mode = 'r', encoding='utf8') as jfile:        
     jdata = json.load(jfile)
-    #load JsonFile
+    # load JsonFile
     # with open(file name, mode = r or w..., encoding = 'utf8') as rename 'jfile'
     # variable 'jdata' = json.load('jfile')
 
@@ -45,5 +45,18 @@ class React(Cog_Extension):
         time = datetime.datetime.now()
         await ctx.send(time)
 
+    @commands.group()                                       #group commands and subcommand
+    async def subcommand(self, ctx):
+        await ctx.send("Subcommand")
+    @subcommand.command()
+    async def sub1(self, ctx):
+        await ctx.send("this is subcommand 1 ")
+    @subcommand.command()
+    async def sub2(self, ctx):
+        await ctx.send("this is subcommand 2 ")
+    @subcommand.command()
+    async def sub3(self, ctx):
+        await ctx.send("this is subcommand 3 ")
+        
 def setup(bot):
     bot.add_cog(React(bot))
