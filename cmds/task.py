@@ -20,7 +20,7 @@ class Task(Cog_Extension):
             await self.bot.wait_until_ready()                                               #wait bot online
             self.channel = self.bot.get_channel(934720325000777819)
             while not self.bot.is_closed():
-                now_time = datetime.datetime.now().strftime('%M%S')                         #(min,sec)
+                now_time = datetime.datetime.utcnow().strftime('%M%S')                         #(min,sec)
                 with open('setting.json','r',encoding = 'utf8') as jfile:
                     jdata = json.load(jfile)
                 if now_time == jdata['time']:                                               #set_time while time == set_time

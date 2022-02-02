@@ -20,5 +20,9 @@ class Slash(Cog_Extension):
     async def delay(self, ctx : SlashContext):
         await ctx.send(f'{round(self.bot.latency*1000)} (ms)')
 
+    @cog_ext.cog_slash(name="Artstation", description="Artstation_website")
+    async def artstation(self, ctx : SlashContext):
+        await ctx.send('https://www.artstation.com/?sort_by=popular')
+
 def setup(bot):
     bot.add_cog(Slash(bot))
