@@ -1,6 +1,5 @@
 import discord
 import json
-from discord.ext import commands
 from core.classs import Cog_Extension
 from discord_slash import SlashContext, cog_ext
 
@@ -23,6 +22,14 @@ class Slash(Cog_Extension):
     @cog_ext.cog_slash(name="Artstation", description="Artstation_website")
     async def artstation(self, ctx : SlashContext):
         await ctx.send('https://www.artstation.com/?sort_by=popular')
+
+    @cog_ext.cog_slash(name="R6Stats",description="RainbowSixSeige_stats")
+    async def rainbowSix(self, ctx : SlashContext):
+        await ctx.send('https://r6.tracker.network/')
+
+    @cog_ext.cog_slash(name="EldenRing", description="EldenRing(forum)")
+    async def eldenRing(self, ctx : SlashContext):
+        await ctx.send('https://forum.gamer.com.tw/A.php?bsn=36726')
 
 def setup(bot):
     bot.add_cog(Slash(bot))

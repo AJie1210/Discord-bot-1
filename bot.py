@@ -1,4 +1,3 @@
-from ast import AsyncFunctionDef
 from dis import dis
 from tokenize import Token
 from unicodedata import name
@@ -7,7 +6,7 @@ from discord.ext import commands
 import json
 import os
 import keep_alive                                               #import keep_alive
-from discord_slash import SlashCommand                          #from discord_slash import Slashcommand
+from discord_slash import client                                #from discord_slash import Slashcommand
 
 with open('setting.json', mode = 'r', encoding='utf8') as jfile:
     jdata = json.load(jfile)
@@ -17,7 +16,7 @@ with open('setting.json', mode = 'r', encoding='utf8') as jfile:
 intents = discord.Intents.default()                             #初始設定
 intents.members = True
 bot = commands.Bot(command_prefix="!", intents = intents)       #setting commands prefix
-slash = SlashCommand(bot, sync_commands=True, sync_on_cog_reload=True)  #setting slash command
+slash = client.SlashCommand(bot, sync_commands=True, sync_on_cog_reload=True)  #setting slash command
 
 @bot.event                                                      #Bot online message
 async def on_ready():

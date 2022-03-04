@@ -1,4 +1,3 @@
-import discord
 from discord.ext import commands
 from core.classs import Cog_Extension
 import json, asyncio, datetime
