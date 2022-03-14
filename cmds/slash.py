@@ -31,5 +31,9 @@ class Slash(Cog_Extension):
     async def eldenRing(self, ctx : SlashContext):
         await ctx.send('https://forum.gamer.com.tw/A.php?bsn=36726')
 
+    @cog_ext.cog_slash(name="DiscordBot-Web", description="Discord Portal")
+    async def discordportal(self, ctx : SlashContext):
+        await ctx.send('https://discord.com/developers/applications')
+
 def setup(bot):
     bot.add_cog(Slash(bot))
