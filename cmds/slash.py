@@ -23,17 +23,19 @@ class Slash(Cog_Extension):
     async def artstation(self, ctx : SlashContext):
         await ctx.send('https://www.artstation.com/?sort_by=popular')
 
+    @cog_ext.cog_slash(name="Bahamut",description="Bahamut_website")
+    async def Bahamut(self, ctx : SlashContext):
+        await ctx.send('https://www.gamer.com.tw/')
+
     @cog_ext.cog_slash(name="R6Stats",description="RainbowSixSeige_stats")
     async def rainbowSix(self, ctx : SlashContext):
         await ctx.send('https://r6.tracker.network/')
 
-    @cog_ext.cog_slash(name="EldenRing", description="EldenRing(forum)")
-    async def eldenRing(self, ctx : SlashContext):
-        await ctx.send('https://forum.gamer.com.tw/A.php?bsn=36726')
-
     @cog_ext.cog_slash(name="DiscordBot-Web", description="Discord Portal")
     async def discordportal(self, ctx : SlashContext):
         await ctx.send('https://discord.com/developers/applications')
+    
+    
 
 def setup(bot):
     bot.add_cog(Slash(bot))
