@@ -27,11 +27,11 @@ class Slash(Cog_Extension):
     async def Bahamut(self, ctx : SlashContext):
         await ctx.send('https://www.gamer.com.tw/')
 
-    @cog_ext.cog_slash(name="R6Stats",description="RainbowSixSeige_stats")
+    @cog_ext.cog_slash(name="R6Stats",description="RainbowSixSeigestats_website")
     async def rainbowSix(self, ctx : SlashContext):
         await ctx.send('https://r6.tracker.network/')
 
-    @cog_ext.cog_slash(name="DiscordBot-Web", description="Discord Portal")
+    @cog_ext.cog_slash(name="DiscordBot-Web", description="Discord Portal_website")
     async def discordportal(self, ctx : SlashContext):
         await ctx.send('https://discord.com/developers/applications')
     
