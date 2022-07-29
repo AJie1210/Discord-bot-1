@@ -43,4 +43,4 @@ for Filename in os.listdir('./cmds'):                           #Cog load all fi
 
 if __name__ == "__main__":                                      #Bot run setting
     keep_alive.keep_alive()                                     #24H bot online
-    bot.run(jdata['TOKEN'])                                     # Index = 'TOKEN'
+    bot.run(jdata['TOKEN'])                                     #Index = 'TOKEN'
